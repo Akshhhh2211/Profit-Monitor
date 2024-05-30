@@ -21,7 +21,8 @@ const ProjectForm = () => {
         // Calculate total amount when total expense or expense amount changes
         const total = parseFloat(amountReceived) - getTotalExpenses();
         setTotalExpense(total);
-    }, [amountReceived, expenses,getTotalExpenses]);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [amountReceived, expenses]);
 
     // Function to calculate total expense
     const getTotalExpenses = () => {
